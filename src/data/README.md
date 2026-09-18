@@ -66,3 +66,9 @@ Run `python3 scripts/map-research-candidates.py` to verify saved Wikipedia leads
 The additional You.com authorization is a maximum API usage budget, not a purchase of account credits. `scripts/extend-settlement-plan.py` only extends the queue; it does not authorize spending or reset the ledger. Raw search pages are research leads and never count as mapped temple records until identity and coordinates are resolved. Simulated datasets and sources with unverified reuse terms are excluded.
 
 This expansion added **36 mapped records** (31 Wikipedia/Wikidata-backed and five OpenStreetMap features), taking the catalog from **58,989 to 59,025**. The 1,998 additional reserved You.com requests have an estimated cost of **USD 9.99**, for **USD 29.99** across the two authorized batches. There are **31,323 candidate source pages**; these are not extra mapped temples.
+
+## Google discovery toward 500,000 records
+
+`google-source-research-report.json` records the Google-led source review. Temples of India currently advertises over 600,000 listings, but this is a publisher claim, not an independently validated Hindu-temple inventory. Its reviewed pages did not expose a bulk export or documented data API, and bulk reuse rights were not established. A public listing for San Pio Capuchin Ashram also demonstrates the need for religion/type review. No records were imported from this directory and no paid API requests were made. The mapped catalog remains **59,025**, leaving **440,975** additional unique, coordinate-backed records to reach 500,000.
+
+The next bulk source must supply stable identifiers, names, coordinates, provenance, and reuse terms. Importing it also requires deduplication and catalog sharding/compact map delivery; the existing single catalog is already approximately 60 MB.

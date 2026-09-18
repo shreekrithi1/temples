@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-18T03:32:35.547941+00:00",
+  "discoveryEngine": "Google Search",
+  "query": "Hindu temple dataset 500000 coordinates India download",
+  "targetMappedRecords": 500000,
+  "baselineMappedRecords": 59025,
+  "finalMappedRecords": 59025,
+  "addedRecords": 0,
+  "remainingToTarget": 440975,
+  "status": "target_not_reached_bulk_source_access_unresolved",
+  "additionalPaidApiRequests": 0,
+  "sources": [
+    {
+      "name": "Temples of India",
+      "url": "https://templesofindia.org/about",
+      "publisherClaim": "6L+ temples listed",
+      "claimIndependentlyVerified": false,
+      "discoveredThrough": "https://dharmawiki.org/index.php/Temples_of_India",
+      "observations": [
+        "Current primary site advertises over 600,000 listings; older Dharmawiki page says around 700,000. Neither is an audited Hindu temple count.",
+        "Public directory exposes paginated detail pages with coordinates in directions links.",
+        "No bulk export or documented public data API was found on the reviewed home, about, directory, detail, or terms pages.",
+        "Bulk republication license was not established; footer says all rights reserved and terms prohibit abusive scraping."
+      ],
+      "termsUrl": "https://templesofindia.org/terms",
+      "contact": "contact@templesofindia.org",
+      "qualityReviewExample": "https://templesofindia.org/temples/san-pio-capuchin-ashram-kottayam-kerala-471pcx",
+      "qualityReviewNote": "Directory includes San Pio Capuchin Ashram; require religion and institution-type validation before importing a bulk extract.",
+      "imported": false
+    },
+    {
+      "name": "All-India Temple Dataset (100,000+)",
+      "url": "https://www.kaggle.com/datasets/chershi/all-india-temple-dataset-100000",
+      "status": "Excluded: simulated records and random coordinates are unsuitable for the live map."
+    }
+  ],
+  "nextRequiredInput": "A reusable bulk export or documented data access from Temples of India or another large source, with stable IDs, temple names, latitude/longitude, provenance, and reuse terms.",
+  "importRequirements": [
+    "Validate Hindu place-of-worship identity.",
+    "Validate coordinates and preserve source identity and attribution.",
+    "Deduplicate against the current catalog and within the new source.",
+    "Shard or compact the growing catalog before exceeding GitHub file limits; avoid sending full details for 500,000 records to each browser."
+  ],
+  "completeGlobalInventory": false
+}
