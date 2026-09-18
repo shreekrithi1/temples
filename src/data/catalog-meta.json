@@ -1,9 +1,9 @@
 {
   "updatedAt": "2026-09-17",
-  "count": 58989,
-  "countries": 92,
-  "withImages": 1848,
-  "withWikipediaSummaries": 1183,
+  "count": 59025,
+  "countries": 93,
+  "withImages": 1857,
+  "withWikipediaSummaries": 1214,
   "sourceDiscovery": "You.com",
   "structuredDataSource": "Wikidata",
   "structuredDataLicense": "CC0",
@@ -99,10 +99,10 @@
     "completeGlobalInventory": false
   },
   "osmImport": {
-    "rawFeatures": 56841,
-    "added": 54894,
-    "duplicatesMatched": 1947,
-    "unnamedFeatures": 12722,
+    "rawFeatures": 56846,
+    "added": 5,
+    "duplicatesMatched": 56841,
+    "unnamedFeatures": 2,
     "license": "ODbL 1.0",
     "attribution": "\u00a9 OpenStreetMap contributors",
     "source": "https://www.openstreetmap.org/copyright",

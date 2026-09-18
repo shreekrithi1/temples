@@ -15,8 +15,9 @@ if(fs.existsSync(lockPath)) {
 }
 fs.writeFileSync(lockPath,String(process.pid),{flag:'wx'});
 let ledger=fs.existsSync(ledgerPath)?JSON.parse(fs.readFileSync(ledgerPath)):{budgetUSD:20,maxAttemptedCalls:4000,attemptedCalls:0,estimatedCostUSD:0,pricePerCallUSD:0.005,pricingSource:plan.pricingSource,startedAt:new Date().toISOString()};
-// Never allow plan edits to silently expand the user's $20 authorization.
-if(ledger.budgetUSD!==20||ledger.maxAttemptedCalls!==4000||ledger.pricePerCallUSD!==0.005||!Number.isInteger(ledger.attemptedCalls)||ledger.attemptedCalls<0||ledger.attemptedCalls>4000)throw new Error('Unexpected budget configuration');
+// The ledger preserves the original $20 plus the explicitly authorized $10 top-up.
+// Queue changes never grant spending permission; keep a hard $30 lifetime ceiling.
+if(![20,30].includes(ledger.budgetUSD)||ledger.maxAttemptedCalls!==ledger.budgetUSD/0.005||(ledger.budgetUSD===30&&!ledger.authorizations?.some(a=>a.additionalUSD===10&&a.totalBudgetUSD===30))||ledger.pricePerCallUSD!==0.005||!Number.isInteger(ledger.attemptedCalls)||ledger.attemptedCalls<0||ledger.attemptedCalls>ledger.maxAttemptedCalls)throw new Error('Unexpected budget configuration');
 const persist=()=>{const temp=new URL('you-settlement-budget.tmp',data);fs.writeFileSync(temp,JSON.stringify(ledger,null,2)+'\n');fs.renameSync(temp,ledgerPath);};
 const results=[];let next=0,done=0,stop=false;const failures=[];
 let lastStart=0;
@@ -24,7 +25,7 @@ async function search(item) {
  const file=new URL(createHash('sha256').update(item.query).digest('hex')+'.json',cache);
  if(fs.existsSync(file)){results.push({...JSON.parse(fs.readFileSync(file)),...item});return;}
  for(let attempt=0;attempt<2;attempt++){
-  if(stop||ledger.attemptedCalls>=4000)return;
+  if(stop||ledger.attemptedCalls>=ledger.maxAttemptedCalls)return;
   // JS executes this reservation synchronously: concurrent workers cannot overspend.
   ledger.attemptedCalls++;ledger.estimatedCostUSD=Number((ledger.attemptedCalls*0.005).toFixed(3));ledger.updatedAt=new Date().toISOString();persist();
   const start=Math.max(Date.now(),lastStart+250);lastStart=start;
@@ -44,7 +45,7 @@ async function search(item) {
  }
 }
 try {
- await Promise.all(Array.from({length:6},async()=>{while(next<plan.queries.length&&!stop){const item=plan.queries[next++];await search(item);done++;if(done%100===0)console.log(`Queries processed: ${done}/${plan.queries.length}; paid attempts: ${ledger.attemptedCalls}/4000; saved results: ${results.reduce((n,r)=>n+r.results.length,0)}`);}}));
+ await Promise.all(Array.from({length:6},async()=>{while(next<plan.queries.length&&!stop){const item=plan.queries[next++];await search(item);done++;if(done%100===0)console.log(`Queries processed: ${done}/${plan.queries.length}; paid attempts: ${ledger.attemptedCalls}/${ledger.maxAttemptedCalls}; saved results: ${results.reduce((n,r)=>n+r.results.length,0)}`);}}));
  const completed=new Set(results.map(r=>r.query));
  const report={provider:'You.com',updatedAt:new Date().toISOString(),completeGlobalInventory:false,budget:ledger,successfulQueries:results.length,resultCount:results.reduce((n,r)=>n+r.results.length,0),unsearchedQueries:plan.queries.filter(q=>!completed.has(q.query)).map(q=>q.query),failures,searches:results};
  const output=new URL('you-settlement-research.tmp',data);

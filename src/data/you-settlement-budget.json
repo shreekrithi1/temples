@@ -1,10 +1,23 @@
 {
-  "budgetUSD": 20,
-  "maxAttemptedCalls": 4000,
-  "attemptedCalls": 4000,
-  "estimatedCostUSD": 20,
+  "budgetUSD": 30,
+  "maxAttemptedCalls": 6000,
+  "attemptedCalls": 5998,
+  "estimatedCostUSD": 29.99,
   "pricePerCallUSD": 0.005,
   "pricingSource": "https://you.com/docs/administration/billing",
   "startedAt": "2026-09-17T23:40:13.974Z",
-  "updatedAt": "2026-09-17T23:56:53.129Z"
+  "updatedAt": "2026-09-18T02:34:27.671Z",
+  "authorizations": [
+    {
+      "budgetUSD": 20,
+      "note": "Original user-authorized collection budget",
+      "at": "2026-09-17T23:40:13.974Z"
+    },
+    {
+      "additionalUSD": 10,
+      "totalBudgetUSD": 30,
+      "note": "User requested additional $10 You.com usage and push",
+      "at": "2026-09-18T02:26:06.458873+00:00"
+    }
+  ]
 }

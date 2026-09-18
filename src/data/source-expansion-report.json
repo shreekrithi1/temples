@@ -1,0 +1,50 @@
+{
+  "startedAt": "2026-09-17",
+  "baselineRecords": 58989,
+  "completeGlobalInventory": false,
+  "paidSearchRequests": 1998,
+  "sourcesReviewed": [
+    {
+      "name": "OpenStreetMap / Overpass",
+      "url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "status": "Imported five additional source-backed OSM features; most downloaded features were duplicates; several regions remain unavailable",
+      "license": "ODbL 1.0"
+    },
+    {
+      "name": "Tamil Nadu HRCE GIS directory",
+      "url": "https://hrce.tn.gov.in/hrcehome/templegis_search.php",
+      "status": "Official directory identified; request timed out; no data imported"
+    },
+    {
+      "name": "Tamil Nadu community research platform",
+      "url": "https://github.com/rajanand/tamilnadu-temples",
+      "status": "Candidate only; upstream dataset unavailable and reuse license not verified; no data imported"
+    },
+    {
+      "name": "All-India Temple Dataset (100,000+)",
+      "url": "https://www.kaggle.com/datasets/chershi/all-india-temple-dataset-100000",
+      "status": "Excluded: publisher identifies simulated records and random coordinates"
+    }
+  ],
+  "completedAt": "2026-09-18T02:36:01.272498+00:00",
+  "status": "completed_with_source_gaps",
+  "finalRecords": 59025,
+  "addedRecords": 36,
+  "addedFromCachedWikipediaResearch": 20,
+  "addedFromNewWikipediaResearch": 11,
+  "addedFromOpenStreetMap": 5,
+  "estimatedAdditionalCostUSD": 9.99,
+  "additionalAuthorizedBudgetUSD": 10,
+  "lifetimeAuthorizedBudgetUSD": 30,
+  "lifetimeEstimatedCostUSD": 29.99,
+  "newResearchSourcePages": 7398,
+  "researchSourcePagesAreTempleRecords": false,
+  "limitations": [
+    "No complete worldwide census was acquired; the catalog does not substantiate a 600,000-record inventory.",
+    "Search result pages are leads, not individually verified temple identities.",
+    "Five longitude bands and three smaller recovery regions remain unavailable; see OSM reports.",
+    "Commons rate limits prevented photo enrichment for some candidates; nine additional attributed photos were retrieved."
+  ],
+  "addedAttributedPhotos": 9,
+  "finalAttributedPhotos": 1857
+}

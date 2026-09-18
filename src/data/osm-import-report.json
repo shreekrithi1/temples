@@ -1,16 +1,71 @@
 {
-  "rawFeatures": 56841,
-  "added": 54894,
-  "duplicatesMatched": 1947,
-  "unnamedFeatures": 12722,
-  "license": "ODbL 1.0",
-  "attribution": "\u00a9 OpenStreetMap contributors",
   "source": "https://www.openstreetmap.org/copyright",
-  "completeGlobalInventory": false,
-  "partialExtracts": [
+  "discoveredVia": "You.com",
+  "classification": "amenity=place_of_worship and religion=hindu",
+  "rawFeatures": 995,
+  "failedRegions": [
     {
-      "file": "world.json",
-      "remark": "runtime error: Query timed out in \"print\" at line 1 after 111 seconds."
+      "west": -120,
+      "east": -90,
+      "error": "curl: (22) The requested URL returned error: 504\n"
+    },
+    {
+      "west": 30,
+      "east": 60,
+      "error": "curl: (22) The requested URL returned error: 504\n"
+    },
+    {
+      "west": 60,
+      "east": 90,
+      "error": "curl: (28) Operation timed out after 120004 milliseconds with 0 bytes received\n"
+    },
+    {
+      "west": 90,
+      "east": 120,
+      "error": "curl: (22) The requested URL returned error: 504\n"
+    },
+    {
+      "west": 150,
+      "east": 180,
+      "error": "curl: (22) The requested URL returned error: 504\n"
+    }
+  ],
+  "completeGlobalInventory": false,
+  "successfulRegions": [
+    {
+      "west": -180,
+      "east": -150,
+      "features": 1
+    },
+    {
+      "west": -150,
+      "east": -120,
+      "features": 50
+    },
+    {
+      "west": -90,
+      "east": -60,
+      "features": 373
+    },
+    {
+      "west": -60,
+      "east": -30,
+      "features": 78
+    },
+    {
+      "west": -30,
+      "east": 0,
+      "features": 162
+    },
+    {
+      "west": 0,
+      "east": 30,
+      "features": 203
+    },
+    {
+      "west": 120,
+      "east": 150,
+      "features": 128
     }
   ]
 }

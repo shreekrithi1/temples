@@ -1,0 +1,22 @@
+[
+  {
+    "region": "tamil-nadu",
+    "status": "deferred",
+    "error": "curl: (22) The requested URL returned error: 504\n"
+  },
+  {
+    "region": "bali",
+    "features": 2128,
+    "status": "downloaded"
+  },
+  {
+    "region": "nepal",
+    "status": "deferred",
+    "error": "curl: (28) Operation timed out after 60005 milliseconds with 0 bytes received\n"
+  },
+  {
+    "region": "mauritius",
+    "status": "deferred",
+    "error": "curl: (28) Operation timed out after 60005 milliseconds with 0 bytes received\n"
+  }
+]
