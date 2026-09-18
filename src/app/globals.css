@@ -313,3 +313,85 @@
 @media (max-width: 900px) {
   .has-selection .map-region { top: 134px; }
 }
+
+/* Welcome: a lightweight particle Earth and an open invitation to explore. */
+.welcome-page { min-height: 100svh; position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; background: #fff7f0; color: #513929; }
+.welcome-ambient { position: absolute; z-index: -1; inset: 0; background: radial-gradient(ellipse at 50% 38%,#ffdec25c,transparent 50%),radial-gradient(ellipse at 8% 83%,#ffe4d047,transparent 30%); }
+.welcome-header { height: 90px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; gap: 24px; position: relative; z-index: 2; animation: welcome-rise .9s both; }
+.welcome-brand { display: flex; align-items: center; font-size: 22px; font-weight: 700; letter-spacing: -.8px; color: #513929; }
+.welcome-brand > span { display: grid; place-items: center; width: 39px; height: 43px; border-radius: 11px; background: #fb651e; color: #fff; margin-right: 10px; box-shadow: 0 5px 16px #fb651e24; }
+.welcome-brand b { font-weight: 400; }
+.welcome-header-note { display: flex; align-items: center; gap: 8px; color: #a08673; font-size: 11px; letter-spacing: .2px; }
+.welcome-header-note > span { width: 5px; height: 5px; border-radius: 50%; background: #e88b51; box-shadow: 0 0 0 4px #fae6d7; }
+.welcome-nav { display: flex; align-items: center; gap: 14px; color: #ae6640; font-size: 12px; padding: 12px 0; }
+.welcome-stage { flex: 1; position: relative; text-align: center; width: min(1080px,100%); margin: 0 auto; padding: 12px 24px 46px; }
+.welcome-kicker { display: flex; align-items: center; justify-content: center; gap: 9px; color: #c28056; font-size: 9px; letter-spacing: 2.7px; animation: welcome-rise 1s .1s both; }
+.welcome-world { position: relative; height: 370px; width: min(860px,100%); margin: 2px auto -18px; }
+.welcome-globe { display: block; position: absolute; left: 50%; top: -47px; transform: translateX(-50%); width: 490px; height: 490px; max-width: none; animation: welcome-earth 1.6s cubic-bezier(.2,.65,.2,1) both; }
+.welcome-orbit { width: 490px; height: 156px; border: 1px solid #dbb39738; border-radius: 50%; position: absolute; top: 142px; left: calc(50% - 245px); transform: rotate(-24deg); pointer-events: none; animation: welcome-orbit 18s ease-in-out infinite alternate; }
+.orbit-two { transform: rotate(26deg); width: 510px; left: calc(50% - 255px); border-style: dashed; opacity: .6; animation-delay: -9s; }
+.welcome-orbit:after { content: ''; position: absolute; width: 6px; height: 6px; left: 75px; top: 16px; border-radius: 50%; background: #eea16c; box-shadow: 0 0 0 5px #eea16c15; }
+.welcome-stat { position: absolute; z-index: 2; text-align: left; padding: 20px 24px; width: 204px; background: linear-gradient(135deg,#ffffffa3,#fff6e9c4); border: 1px solid #fffefd; border-radius: 18px; box-shadow: 0 17px 32px -20px #754b3d55,inset 0 0 0 1px #f5dbcb28; backdrop-filter: blur(10px); animation: welcome-rise 1s .3s both,welcome-float 7s 1.3s ease-in-out infinite; }
+.welcome-stat > svg,.stat-spark { color: #cc926c; float: right; }
+.welcome-stat strong { display: block; font-size: 29px; font-weight: 600; letter-spacing: -1px; color: #ed773a; line-height: 1.2; }
+.welcome-stat > span:not(.stat-spark) { display: block; font-size: 10px; margin-top: 6px; color: #765b49; }
+.welcome-stat i { display: block; font-style: normal; font-size: 9px; margin-top: 14px; color: #b29681; }
+.stat-temples { left: 2%; top: 46px; }
+.stat-countries { right: 0; top: 104px; animation-delay: .45s,-2s; }
+.stat-photos { left: 6%; top: 237px; width: 191px; padding: 17px 22px; animation-delay: .6s,-4s; }
+.stat-photos strong { font-size: 25px; }
+.welcome-coordinate { position: absolute; right: 9%; bottom: 13px; text-align: left; font-size: 8px; letter-spacing: 1.3px; line-height: 2; color: #b79880; animation: welcome-rise 1s .8s both; }
+.welcome-coordinate span { font-size: 10px; letter-spacing: .3px; color: #99775d; }
+.welcome-copy { position: relative; z-index: 3; animation: welcome-rise 1.1s .4s both; }
+.welcome-overline { color: #bf9270; font-size: 8px; letter-spacing: 2.5px; }
+.welcome-copy h1 { font-family: Georgia,'Times New Roman',serif; font-size: clamp(36px,4.3vw,56px); font-weight: 400; line-height: 1.15; letter-spacing: -2px; margin: 14px 0 15px; }
+.welcome-copy h1 em { color: #c66d3f; font-weight: 400; }
+.welcome-copy p { font-size: 13px; line-height: 1.9; color: #9b806c; margin: 0 0 24px; }
+.welcome-enter { position: relative; overflow: hidden; display: flex; justify-content: space-between; align-items: center; gap: 40px; width: min(330px,100%); min-height: 55px; margin: 0 auto; padding: 0 23px; border: 1px solid #f98a4e; border-radius: 12px; background: linear-gradient(115deg,#f88441,#fb651e); box-shadow: 0 10px 25px #ee78372c,inset 0 1px 0 #ffbc8880; color: #fff; font-size: 14px; font-weight: 600; transition: transform .25s,box-shadow .25s; }
+.welcome-enter:before { content: ''; position: absolute; inset: -40% auto -40% -60%; width: 40%; transform: skewX(-25deg); background: linear-gradient(90deg,transparent,#fff4,transparent); animation: welcome-shimmer 6s 2s infinite; pointer-events: none; }
+.welcome-enter:hover { color: white; transform: translateY(-3px); box-shadow: 0 16px 30px #ee783744; }
+.welcome-enter svg { transition: transform .25s; }
+.welcome-enter:hover svg { transform: translateX(4px); }
+.welcome-enter:active { transform: translateY(0) scale(.98); }
+.welcome-reassurance { display: block; font-size: 10px; color: #b39b89; margin-top: 14px; }
+.welcome-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin: 0 5%; padding: 22px 0; border-top: 1px solid #eddace7a; font-size: 9px; color: #b09580; animation: welcome-rise 1s .7s both; }
+.welcome-footer > span:first-child { font-size: 8px; letter-spacing: 1.3px; }
+.welcome-footer i { display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: #c6aa96; vertical-align: middle; margin: 0 8px; }
+.welcome-footer a { display: flex; align-items: center; gap: 10px; color: #a67552; }
+@keyframes welcome-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes welcome-earth { from { opacity: 0; transform: translateX(-50%) scale(.86); filter: blur(8px); } to { opacity: 1; transform: translateX(-50%) scale(1); filter: blur(0); } }
+@keyframes welcome-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes welcome-orbit { from { transform: rotate(-24deg); } to { transform: rotate(-14deg); } }
+@keyframes welcome-shimmer { 0%,65% { left: -60%; } 90%,100% { left: 150%; } }
+@media (min-height: 900px) and (min-width: 701px) { .welcome-stage { padding-top: 40px; } .welcome-world { height: 440px; } .welcome-globe { width: 560px; height: 560px; } .stat-countries { top: 150px; } .stat-photos { top: 280px; } .welcome-orbit { top: 185px; } }
+@media (max-width: 700px) {
+  .welcome-header { height: 76px; padding: 0 23px; }
+  .welcome-brand { font-size: 19px; }
+  .welcome-brand > span { width: 33px; height: 36px; }
+  .welcome-header-note { display: none; }
+  .welcome-nav { font-size: 10px; gap: 6px; }
+  .welcome-stage { padding: 17px 20px 34px; }
+  .welcome-kicker { font-size: 7px; letter-spacing: 1.9px; }
+  .welcome-world { height: 340px; margin-top: 8px; margin-bottom: 8px; }
+  .welcome-globe { width: 390px; height: 390px; top: -13px; }
+  .welcome-orbit { width: 335px; height: 125px; left: calc(50% - 167.5px); top: 140px; }
+  .orbit-two { width: 350px; left: calc(50% - 175px); }
+  .welcome-stat { width: 137px; padding: 13px 14px; border-radius: 13px; }
+  .welcome-stat strong { font-size: 23px; }
+  .welcome-stat > span:not(.stat-spark) { font-size: 8px; margin-top: 4px; }
+  .welcome-stat i { display: none; }
+  .welcome-stat > svg { width: 12px; }
+  .stat-temples { left: -4px; top: 23px; }
+  .stat-countries { right: -4px; top: 226px; width: 128px; }
+  .stat-photos { left: 0; top: 264px; width: 132px; }
+  .welcome-coordinate { display: none; }
+  .welcome-copy h1 { max-width: 330px; margin: 13px auto; font-size: 42px; line-height: 1.05; letter-spacing: -1.8px; }
+  .welcome-copy h1 em { display: block; }
+  .welcome-copy p { font-size: 12px; line-height: 1.8; max-width: 315px; margin: 0 auto 22px; }
+  .welcome-overline { font-size: 7px; }
+  .welcome-footer { flex-wrap: wrap; justify-content: center; text-align: center; gap: 12px; padding: 20px 0; }
+  .welcome-footer > span:first-child { width: 100%; }
+  .welcome-footer a { display: none; }
+}
+@media (max-width: 360px) { .welcome-nav { font-size: 0; } .welcome-world { height: 310px; } .welcome-globe { width: 350px; height: 350px; } .stat-countries { top: 204px; } .stat-photos { top: 239px; } .welcome-copy h1 { font-size: 37px; } }
+@media (prefers-reduced-motion: reduce) { .welcome-page *, .welcome-page *:before { animation: none!important; } }
