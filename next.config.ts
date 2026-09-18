@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  outputFileTracingIncludes: {
+    '/api/temples': ['./src/data/temples.json', './src/data/catalog-meta.json'],
+  },
 };
 
 export default nextConfig;

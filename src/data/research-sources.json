@@ -1,0 +1,19 @@
+{
+  "searchedAt": "2026-09-17",
+  "provider": "You.com",
+  "method": "You.com public Web Search interactive demo",
+  "query": "Hindu temples worldwide India temple list Wikipedia",
+  "results": [
+    {"title":"List of Hindu temples in India", "url":"https://en.wikipedia.org/wiki/List_of_Hindu_temples_in_India"},
+    {"title":"Hindu temple", "url":"https://en.wikipedia.org/wiki/Hindu_temple"},
+    {"title":"Lists of Hindu temples", "url":"https://en.wikipedia.org/wiki/List_of_Hindu_temples"},
+    {"title":"Hindu Temples — TemplePurohit", "url":"https://www.templepurohit.com/hindu-temples-list/"},
+    {"title":"Hindu temples worldwide", "url":"https://hinduonline.co/HinduCulture/ListOfTemplesWorldwide.html"},
+    {"title":"List of largest Hindu temples", "url":"https://en.wikipedia.org/wiki/List_of_largest_Hindu_temples"},
+    {"title":"Temples of India", "url":"https://templesofindia.org/"},
+    {"title":"Hindu temples across the world", "url":"https://shaivam.org/temples-of-lord-shiva/hindu-temples-across-the-world/"},
+    {"title":"Largest Hindu temples in the world", "url":"https://www.namasteindiatrip.com/blog/largest-hindu-temples-in-the-world/"},
+    {"title":"Sacred Hindu temples in India", "url":"https://www.namasteindiatrip.com/blog/temples-in-india/"}
+  ],
+  "dataProvenance": "You.com was used for source discovery. Structured temple records are retrieved from Wikidata's Hindu-temple class Q842402. Temple summaries and photo metadata are retrieved from the linked Wikimedia sources; they are not represented as You.com-authored facts."
+}

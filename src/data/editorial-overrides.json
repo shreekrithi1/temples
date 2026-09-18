@@ -1,0 +1,22 @@
+{
+  "sydney": {
+    "wikidataId": "Q7586331",
+    "wikipediaUrl": "",
+    "websiteUrl": "https://www.svtsydney.org/",
+    "sourceUrl": "https://www.wikidata.org/wiki/Q7586331",
+    "descriptionSourceUrl": "https://www.svtsydney.org/history/",
+    "descriptionSourceName": "Sri Venkateswara Temple Sydney",
+    "descriptionLicense": "Editorial summary",
+    "description": "Sri Venkateswara Temple stands on a wooded hill in Helensburgh, New South Wales. Construction began in 1978, and its main consecration took place on 30 June 1985. The complex honours Sri Venkateswara, Lakshmi and Andal, as well as Shiva and Tripurasundari, and has four encircling corridors. Tirupati Tirumala Devasthanam supported its establishment.",
+    "image": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Sri_Venkateswara_Temple_Helensburgh.jpg/960px-Sri_Venkateswara_Temple_Helensburgh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sri_Venkateswara_Temple_Helensburgh.jpg",
+      "credit": "Kanags",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Sri Venkateswara Temple, Helensburgh",
+      "width": 960,
+      "height": 633
+    }
+  }
+}

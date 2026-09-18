@@ -1,0 +1,45 @@
+{
+  "provider": "You.com",
+  "searchedAt": "2026-09-17",
+  "query": "Somnath Temple Kedarnath Temple Meenakshi Temple history deity architecture Wikimedia photos",
+  "results": [
+    {
+      "title": "Somnath Temple",
+      "url": "https://en.wikipedia.org/wiki/Somnath_temple",
+      "temple": "Somnath Temple"
+    },
+    {
+      "title": "Kedarnath Temple",
+      "url": "https://en.wikipedia.org/wiki/Kedarnath_Temple",
+      "temple": "Kedarnath Temple"
+    },
+    {
+      "title": "History \u2014 District Gir Somnath, Government of Gujarat",
+      "url": "https://girsomnath.nic.in/about-district/history/",
+      "temple": "Somnath Temple"
+    },
+    {
+      "title": "Kedarnath Temple history and architecture",
+      "url": "https://www.euttaranchal.com/tourism/kedarnath-temple.php",
+      "temple": "Kedarnath Temple"
+    },
+    {
+      "title": "Kedarnath Temple \u2014 Britannica",
+      "url": "https://www.britannica.com/topic/Kedarnath-Temple",
+      "temple": "Kedarnath Temple"
+    },
+    {
+      "title": "Sacred Hindu temples in India",
+      "url": "https://www.namasteindiatrip.com/blog/temples-in-india/",
+      "temple": "Meenakshi Temple"
+    }
+  ],
+  "additionalResearch": {
+    "query": "Sri Venkateswara Temple Helensburgh Wikimedia Commons Wikipedia",
+    "sources": [
+      "https://www.svtsydney.org/history/",
+      "https://commons.wikimedia.org/wiki/File:Sri_Venkateswara_Temple_Helensburgh.jpg",
+      "https://www.wikidata.org/wiki/Q7586331"
+    ]
+  }
+}

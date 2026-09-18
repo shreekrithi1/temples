@@ -1,0 +1,16 @@
+{
+  "rawFeatures": 56841,
+  "added": 54894,
+  "duplicatesMatched": 1947,
+  "unnamedFeatures": 12722,
+  "license": "ODbL 1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "source": "https://www.openstreetmap.org/copyright",
+  "completeGlobalInventory": false,
+  "partialExtracts": [
+    {
+      "file": "world.json",
+      "remark": "runtime error: Query timed out in \"print\" at line 1 after 111 seconds."
+    }
+  ]
+}

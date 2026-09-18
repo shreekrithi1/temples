@@ -1,0 +1,10 @@
+{
+  "budgetUSD": 20,
+  "maxAttemptedCalls": 4000,
+  "attemptedCalls": 4000,
+  "estimatedCostUSD": 20,
+  "pricePerCallUSD": 0.005,
+  "pricingSource": "https://you.com/docs/administration/billing",
+  "startedAt": "2026-09-17T23:40:13.974Z",
+  "updatedAt": "2026-09-17T23:56:53.129Z"
+}

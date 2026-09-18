@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cached public temple ingestion responses
+.temple-cache/
+
+# Large local research archives (regenerable from the ignored response cache)
+/src/data/you-settlement-research.json
+/src/data/you-settlement-research.partial.json
+/src/data/temple-research-candidates.json

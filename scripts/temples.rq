@@ -1,0 +1,11 @@
+SELECT ?temple ?templeLabel ?templeDescription ?coord ?countryLabel ?placeLabel ?image ?deityLabel ?architectureLabel ?heritageLabel ?article WHERE {
+ ?temple wdt:P31/wdt:P279* wd:Q842402; wdt:P625 ?coord.
+ OPTIONAL { ?temple wdt:P17 ?country. }
+ OPTIONAL { ?temple wdt:P131 ?place. }
+ OPTIONAL { ?temple wdt:P18 ?image. }
+ OPTIONAL { ?temple wdt:P825 ?deity. }
+ OPTIONAL { ?temple wdt:P149 ?architecture. }
+ OPTIONAL { ?temple wdt:P1435 ?heritage. }
+ OPTIONAL { ?article schema:about ?temple; schema:isPartOf <https://en.wikipedia.org/>. }
+ SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+} LIMIT 15000
